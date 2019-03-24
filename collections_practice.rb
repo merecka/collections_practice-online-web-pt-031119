@@ -1,3 +1,5 @@
+require 'pry'
+
 #Question 1
 def sort_array_asc(numbers)
   numbers.sort
@@ -10,7 +12,7 @@ end
 
 #Question 3
 def sort_array_char_count(strings)
-  strings.sort{|x,y| strings[x].length <=> strings[y].length}
+  strings.sort{|x,y| x.length <=> y.length}
 end
 
 #Question 4
@@ -19,4 +21,35 @@ def swap_elements(text)
   third_element = text[2]
   text[1] = third_element
   text[2] = second_element
+  text
+end
+
+#Question 5
+def reverse_array(numbers)
+numbers.reverse
+end
+
+#Question 6
+def kesha_maker(words)
+  new_array = []
+  words.each do |x|
+    x[2] = "$"
+    new_array << x
+  end
+end
+
+#Question 7
+def find_a(phrases)
+  new_array = []
+  phrases.each do |x|
+      if x.start_with?("a")
+        new_array << x
+      end
+  end
+  new_array
+end
+
+#Question 8
+def sum_array(numbers)
+  numbers.inject(x, :+)
 end
