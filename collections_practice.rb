@@ -51,5 +51,5 @@ end
 
 #Question 8
 def sum_array(numbers)
-  numbers.inject(x, :+)
+  numbers.inject(:+)
 end
